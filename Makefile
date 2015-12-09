@@ -1,4 +1,4 @@
-BOOK_NAME=geneve_1564
+BOOK_NAME=rv1865
 TEXINPUTS=microtype:
 FONTSDIR=fonts
 TODAY=$(shell date --iso)
