@@ -1,2 +1,10 @@
-rv1865.aux
-rv1865.log
+*.aux
+*.dvi
+*.idx
+*.ilg
+*.ind
+*.log
+*.lol
+*.out
+*.ps
+*.toc
