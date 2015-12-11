@@ -1,17 +1,25 @@
 \documentclass[twocolumn,paper=a4,pagesize=pdftex,12pt,headinclude=on]{scrbook}
 \areaset[1in]{5in}{11in}
 
+\usepackage[greek,spanish]{babel}
+
 \usepackage{bigfoot}
 \usepackage{ragged2e}
 
 \usepackage{fontspec}
 \usepackage{xunicode}
-\defaultfontfeatures{Ligatures=Historic,Contextuals=Alternate,Numbers=OldStyle,RawFeature={+ss02,+cv01,+dlig}}
-\setmainfont[RawFeature={+ss02,+cv01,+ss05,+dlig},ItalicFeatures={RawFeature=+cv04,CharacterVariant=5:2}]{EB Garamond}
+
+\input Romantik.fd
+\newcommand*\lettrinefont{\usefont{U}{Romantik}{xl}{n}}
+
+%\defaultfontfeatures{Ligatures=Historic,Contextuals=Alternate,Numbers=OldStyle,RawFeature={+ss02,+cv01,+dlig}}
+%\setmainfont[RawFeature={+ss02,+cv01,+ss05,+dlig},ItalicFeatures={RawFeature=+cv04,CharacterVariant=5:2}]{EB Garamond}
+\defaultfontfeatures{Ligatures=Historic,Contextuals=Alternate,Numbers=OldStyle,RawFeature={+dlig}}
+\setmainfont[RawFeature={+dlig},ItalicFeatures={CharacterVariant=5:2}]{EB Garamond}
 % Do the replacements manually in titles, to not ruin the textsc
 \newfontfamily\booktitlefont[RawFeature={-ss02},LetterSpace=40,WordSpace=6]{EB Garamond}
 \newfontfamily\spacedfont[RawFeature={-ss02},LetterSpace=20,WordSpace=3]{EB Garamond}
-\newfontfamily\lettrinefont{EB Garamond Initials}
+%\newfontfamily\lettrinefont{EB Garamond Initials}
 \newfontfamily\headerfont{EB Garamond}
 
 \usepackage{graphicx}
@@ -25,22 +33,22 @@
 \usepackage{bibleref-spanish}
 \renewcommand*{\BRchvsep}{.}%
 \renewcommand*{\BRvsep}{,}%
-\setbooktitle{Ex}{Exo.}%
-\setbooktitle{Dt}{Deut.}%
-\setbooktitle{Job}{Iob}%
-\setbooktitle{Ps}{Pseau.}%
-\setbooktitle{Ws}{Sap.}%
-\setbooktitle{Qo}{Eccl\-siast.}%
-\setbooktitle{Ec}{Ecclestiasti.}%
-\setbooktitle{He}{Hebr.}%
-\setbooktitle{Je}{Ierem.}%
-\setbooktitle{Mt}{Matt.}%
-\setbooktitle{Mc}{Marc}%
-\setbooktitle{Jn}{Iean}%
-\setbooktitle{Ac}{Act.}%
+\setbooktitle{Ex}{Ex.}%
+\setbooktitle{Dt}{Dt.}%
+\setbooktitle{Job}{Job}%
+\setbooktitle{Ps}{Sal.}%
+\setbooktitle{Ws}{Sb.}%
+\setbooktitle{Qo}{Ct.}%
+\setbooktitle{Ec}{Ecl.}%
+\setbooktitle{He}{He.}%
+\setbooktitle{Je}{Je.}%
+\setbooktitle{Mt}{Mt.}%
+\setbooktitle{Mc}{Mc.}%
+\setbooktitle{Jn}{Jn.}%
+\setbooktitle{Ac}{Hch.}%
 \setbooktitle{ICo}{1.Cor.}%
-\setbooktitle{Col}{Colos.}%
-%\setbooktitle{Ef}{Ephes.}%
+\setbooktitle{Col}{Co.}%
+\setbooktitle{Eph}{Ef.}%
 \renewcommand{\BRbooktitlestyle}{\textit}%
 
 
@@ -106,6 +114,9 @@
   \makebox[\textwidth][c]{\includegraphics[width=6in]{#4}}
   \chapter[#1]{#2,\\\large #3\\\char"2766}
 }
+\newcommand{\bbooknog}[3][]{%
+  \chapter[#1]{#2,\\\large #3\\\char"2766}
+}
 \titleformat{\chapter}[hang]%
    {\centering\huge}%
    {}%
@@ -115,7 +126,7 @@
   {0pt}{0pt}{5pt}
 
 % Bible chapters
-\newcommand{\bchapter}[1][chap.]{%
+\newcommand{\bchapter}[1][cap.]{%
    \setcounter{verse}{0}%
    \def\chaptertitle{#1}
    \section{}{}
@@ -155,7 +166,7 @@
 
 \begin{document}
 
-\input{libros/daniel}
+\input{libros/27-daniel}
 
 \end{document}
 
