@@ -16,6 +16,8 @@
 %\setmainfont[RawFeature={+ss02,+cv01,+ss05,+dlig},ItalicFeatures={RawFeature=+cv04,CharacterVariant=5:2}]{EB Garamond}
 \defaultfontfeatures{Ligatures=Historic,Contextuals=Alternate,Numbers=OldStyle,RawFeature={+dlig}}
 \setmainfont[RawFeature={+dlig},ItalicFeatures={CharacterVariant=5:2}]{EB Garamond}
+
+
 % Do the replacements manually in titles, to not ruin the textsc
 \newfontfamily\booktitlefont[RawFeature={-ss02},LetterSpace=40,WordSpace=6]{EB Garamond}
 \newfontfamily\spacedfont[RawFeature={-ss02},LetterSpace=20,WordSpace=3]{EB Garamond}
@@ -115,7 +117,7 @@
   \chapter[#1]{#2,\\\large #3\\\char"2766}
 }
 \newcommand{\bbooknog}[3][]{%
-  \chapter[#1]{#2,\\\large #3\\\char"2766}
+  \chapter[#1]{#2\\\large \\\char"2766}
 }
 \titleformat{\chapter}[hang]%
    {\centering\huge}%
